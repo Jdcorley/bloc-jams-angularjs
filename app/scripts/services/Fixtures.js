@@ -15,7 +15,6 @@
          { title: 'Magenta', duration: '374.22', audioUrl: '/assets/music/magenta' }
        ]
     };
-
     var albumMarconi = {
        title: 'The Telephone',
        artist: 'Guglielmo Marconi',
@@ -31,9 +30,17 @@
        ]
     };
 
+    Fixtures.getCollection =  function(numberOfAlbums){
+      var array = [];
+      for (var i=0; i < numberOfAlbums; i++){
+      array.push(angular.copy(albumPicasso));
+    } return array
+  };
+
     Fixtures.getAlbum = function() {
       return albumPicasso
     };
+
     return Fixtures;
   }
 
