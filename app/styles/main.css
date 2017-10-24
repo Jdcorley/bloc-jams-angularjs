@@ -9,16 +9,16 @@ html {
 }
 
 body {
+    font-family: 'Open Sans';
+    color: white;
+    min-height: 100%;
     background-image: url(../assets/images/blurred_backgrounds/blur_bg_3.jpg);
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center center;
     background-size: cover;
-    font-family: 'Open Sans';
-    color: white;
-    min-height: 100%;
-    padding-bottom: 200px;
- }
+    padding-bottom: 150px;
+}
 
 .navbar {
     position: relative;
@@ -107,9 +107,4 @@ body {
 
 .clearfix:after {
     clear: both;
-}
-
-.seek-bar{
-  width: 300px;
-  background-color: white;
 }
