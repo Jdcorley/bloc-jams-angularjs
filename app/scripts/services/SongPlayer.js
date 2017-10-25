@@ -5,7 +5,10 @@
        * @type {object}
        */
       var SongPlayer = {};
-       /*
+
+
+    SongPlayer.volume = null;
+    /*
     * @desc Current playback time (in seconds) of currently playing song
     * @type {Number}
     */
@@ -48,7 +51,11 @@
              SongPlayer.currentTime = currentBuzzObject.getTime();
          });
      });
-     
+     currentBuzzObject.bind('volumeupdate', function() {
+      $rootScope.$apply(function() {
+          SongPlayer.volume = currentBuzzObject.setVolume();
+      });
+     });
         SongPlayer.currentSong = song;
       };
       /*
@@ -139,6 +146,11 @@
          }
      };
 
+     SongPlayer.setVolume = function () {
+        if (currentBuzzObject) {
+       currentBuzzObject.setVolume(volume);
+    }
+  };
 
       return SongPlayer;
     }
