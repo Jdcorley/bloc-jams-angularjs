@@ -5,7 +5,10 @@
        * @type {object}
        */
       var SongPlayer = {};
-       /*
+
+
+    SongPlayer.volume = 50;
+    /*
     * @desc Current playback time (in seconds) of currently playing song
     * @type {Number}
     */
@@ -48,7 +51,6 @@
              SongPlayer.currentTime = currentBuzzObject.getTime();
          });
      });
-     
         SongPlayer.currentSong = song;
       };
       /*
@@ -138,8 +140,12 @@
              currentBuzzObject.setTime(time);
          }
      };
-
-
+     SongPlayer.setVolume = function(volume) {
+         if (currentBuzzObject) {
+             currentBuzzObject.setVolume(volume);
+         }
+         SongPlayer.volume = volume;
+     };
       return SongPlayer;
     }
 
