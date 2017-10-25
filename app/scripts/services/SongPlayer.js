@@ -6,12 +6,8 @@
        */
       var SongPlayer = {};
 
-
-<<<<<<< HEAD
-    SongPlayer.volume = null;
-=======
     SongPlayer.volume = 50;
->>>>>>> assignment-10
+
     /*
     * @desc Current playback time (in seconds) of currently playing song
     * @type {Number}
@@ -55,14 +51,6 @@
              SongPlayer.currentTime = currentBuzzObject.getTime();
          });
      });
-<<<<<<< HEAD
-     currentBuzzObject.bind('volumeupdate', function() {
-      $rootScope.$apply(function() {
-          SongPlayer.volume = currentBuzzObject.setVolume();
-      });
-     });
-=======
->>>>>>> assignment-10
         SongPlayer.currentSong = song;
       };
       /*
